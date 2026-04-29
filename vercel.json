@@ -1,14 +1,14 @@
 {
   "rewrites": [
     {
-      "source": "/",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "blog.pozool.com"
         }
       ],
-      "destination": "/blog"
+      "destination": "/blog/:path*"
     }
   ]
 }

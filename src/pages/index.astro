@@ -1,4 +1,6 @@
 ---
+import Analytics from "@vercel/analytics/astro";
+
 const blogHref = import.meta.env.PROD ? "https://blog.pozool.com" : "/blog";
 
 const navItems = [
@@ -1747,5 +1749,6 @@ const footerLegal = [
         setLanguage(root.dataset.lang === "es" ? "en" : "es");
       });
     </script>
+    <Analytics />
   </body>
 </html>
