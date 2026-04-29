@@ -1,5 +1,38 @@
 {
-  "rewrites": [
+  "redirects": [
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.pozool.com"
+        }
+      ],
+      "destination": "https://pozool.com/blog",
+      "permanent": false
+    },
+    {
+      "source": "/blog/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.pozool.com"
+        }
+      ],
+      "destination": "https://pozool.com/blog/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.pozool.com"
+        }
+      ],
+      "destination": "https://pozool.com/blog",
+      "permanent": false
+    },
     {
       "source": "/:path*",
       "has": [
@@ -8,7 +41,8 @@
           "value": "blog.pozool.com"
         }
       ],
-      "destination": "/blog/:path*"
+      "destination": "https://pozool.com/blog/:path*",
+      "permanent": false
     }
   ]
 }
