@@ -521,29 +521,37 @@ const footerLegal = [
       }
 
       .hero-photo:first-child {
-        animation: hero-fade-first 16s ease-in-out infinite;
+        animation: hero-fade-first 24s ease-in-out infinite;
       }
 
       .hero-photo:nth-child(2) {
-        animation: hero-fade-second 16s ease-in-out infinite;
+        animation: hero-fade-second 24s ease-in-out infinite;
       }
 
       .hero-photo:nth-child(3) {
-        animation: hero-fade-third 16s ease-in-out infinite;
+        animation: hero-fade-third 24s ease-in-out infinite;
       }
 
       .hero-photo:nth-child(4) {
-        animation: hero-fade-fourth 16s ease-in-out infinite;
+        animation: hero-fade-fourth 24s ease-in-out infinite;
+      }
+
+      .hero-photo:nth-child(5) {
+        animation: hero-fade-fifth 24s ease-in-out infinite;
+      }
+
+      .hero-photo:nth-child(6) {
+        animation: hero-fade-sixth 24s ease-in-out infinite;
       }
 
       @keyframes hero-fade-first {
         0%,
-        20% {
+        13% {
           opacity: 1;
         }
 
-        25%,
-        96% {
+        16.666%,
+        97% {
           opacity: 0;
         }
 
@@ -554,16 +562,16 @@ const footerLegal = [
 
       @keyframes hero-fade-second {
         0%,
-        20% {
+        13% {
           opacity: 0;
         }
 
-        25%,
-        45% {
+        16.666%,
+        29.666% {
           opacity: 1;
         }
 
-        50%,
+        33.333%,
         100% {
           opacity: 0;
         }
@@ -571,16 +579,16 @@ const footerLegal = [
 
       @keyframes hero-fade-third {
         0%,
-        45% {
+        29.666% {
           opacity: 0;
         }
 
-        50%,
-        70% {
+        33.333%,
+        46.333% {
           opacity: 1;
         }
 
-        75%,
+        50%,
         100% {
           opacity: 0;
         }
@@ -588,12 +596,46 @@ const footerLegal = [
 
       @keyframes hero-fade-fourth {
         0%,
-        70% {
+        46.333% {
           opacity: 0;
         }
 
-        75%,
-        96% {
+        50%,
+        63% {
+          opacity: 1;
+        }
+
+        66.666%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes hero-fade-fifth {
+        0%,
+        63% {
+          opacity: 0;
+        }
+
+        66.666%,
+        79.666% {
+          opacity: 1;
+        }
+
+        83.333%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes hero-fade-sixth {
+        0%,
+        79.666% {
+          opacity: 0;
+        }
+
+        83.333%,
+        97% {
           opacity: 1;
         }
 
@@ -1278,6 +1320,20 @@ const footerLegal = [
                   class="hero-photo"
                   src="/airbnb-demo-3.jpg"
                   alt="Airbnb guest messaging demo preview for a rental property"
+                  width="1600"
+                  height="1100"
+                />
+                <img
+                  class="hero-photo"
+                  src="/airbnb-demo-4.jpg"
+                  alt="Airbnb calendar demo preview for a rental property"
+                  width="1600"
+                  height="1100"
+                />
+                <img
+                  class="hero-photo"
+                  src="/airbnb-demo-5.png"
+                  alt="Airbnb hosting dashboard demo preview for a rental property"
                   width="1600"
                   height="1100"
                 />
