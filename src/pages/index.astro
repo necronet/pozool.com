@@ -18,8 +18,6 @@ const navItems = [
   { label: { en: "Home", es: "Inicio" }, href: "#top" },
   { label: { en: "Product", es: "Producto" }, href: "#product" },
   { label: { en: "Features", es: "Funciones" }, href: "#features" },
-  { label: { en: "About", es: "Nosotros" }, href: "#about" },
-  { label: { en: "Core Values", es: "Valores" }, href: "#values" },
   { label: { en: "Team", es: "Equipo" }, href: "#team" },
   { label: { en: "Blog", es: "Blog" }, href: blogHref },
 ];
@@ -73,12 +71,6 @@ const features = [
     },
     icon: "chart",
   },
-];
-
-const stats = [
-  { value: { en: "100%", es: "100%" }, label: { en: "Operator-built workflows", es: "Flujos creados con operadores" } },
-  { value: { en: "1 view", es: "1 vista" }, label: { en: "All properties, one calendar", es: "Todas las propiedades, un calendario" } },
-  { value: { en: "0", es: "0" }, label: { en: "Spreadsheets needed", es: "Hojas de cálculo necesarias" } },
 ];
 
 const heroHighlights = [
@@ -162,10 +154,7 @@ const teamMembers = [
 ];
 
 const footerCompany = [
-  { label: { en: "About", es: "Nosotros" }, href: "#about" },
   { label: { en: "Team", es: "Equipo" }, href: "#team" },
-  { label: { en: "Core Values", es: "Valores" }, href: "#values" },
-  { label: { en: "Why Pozool", es: "Por qué Pozool" }, href: "#why" },
 ];
 
 const footerProduct = [
@@ -863,64 +852,11 @@ const footerLegal = [
         color: var(--ink-soft);
       }
 
-      .section-link {
-        margin-top: 3rem;
-        text-align: center;
-      }
-
-      .section-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary);
-        font-size: 0.95rem;
-        font-weight: 600;
-      }
-
       .panel {
         padding: 2.5rem;
         border: 1px solid var(--border);
         border-radius: 1.5rem;
         background: var(--surface-warm);
-      }
-
-      .split-grid {
-        display: grid;
-        gap: 2.5rem;
-        align-items: center;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-      }
-
-      .stat-card {
-        padding: 1.25rem;
-        text-align: center;
-        border: 1px solid var(--border);
-        border-radius: 1rem;
-        background: var(--card);
-        box-shadow: var(--shadow-card);
-      }
-
-      .stat-card strong {
-        display: block;
-        font-size: 1.9rem;
-        font-weight: 700;
-        letter-spacing: -0.04em;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .stat-card span {
-        display: block;
-        margin-top: 0.25rem;
-        font-size: 0.75rem;
-        color: var(--muted-foreground);
       }
 
       .team-grid {
@@ -1182,10 +1118,6 @@ const footerLegal = [
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        .split-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
         .team-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
@@ -1201,11 +1133,6 @@ const footerLegal = [
         }
       }
 
-      @media (max-width: 47.99rem) {
-        .stats {
-          grid-template-columns: 1fr;
-        }
-      }
     </style>
   </head>
   <body>
@@ -1462,132 +1389,6 @@ const footerLegal = [
               ))}
             </div>
 
-            <div class="section-link">
-              <a href="#values">
-                <span class="i18n-en">See all features</span>
-                <span class="i18n-es">Ver todas las funciones</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section tight-top" id="values">
-          <div class="container">
-            <div class="panel">
-              <div class="split-grid">
-                <div>
-                  <div class="eyebrow">
-                    <span class="eyebrow-dot"></span>
-                    <span class="i18n-en">Built with operators</span>
-                    <span class="i18n-es">Creado con operadores</span>
-                  </div>
-                  <h2 class="section-title" style="margin-top: 1.25rem; font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.15; letter-spacing: -0.03em;">
-                    <span class="i18n-en">
-                      "Finally a tool that thinks like an operator, not a startup demo."
-                    </span>
-                    <span class="i18n-es">
-                      "Por fin una herramienta que piensa como operador, no como demo de startup."
-                    </span>
-                  </h2>
-                  <p class="lead" style="margin-top: 1.25rem; max-width: none;">
-                    <span class="i18n-en">
-                      Pozool is shaped by daily collaboration with the people running rentals —
-                      cleaners, hosts, managers, and owners. Every workflow is designed around what
-                      really happens on the ground.
-                    </span>
-                    <span class="i18n-es">
-                      Pozool se construye en colaboración diaria con quienes operan rentas:
-                      personal de limpieza, anfitriones, administradores y propietarios. Cada flujo
-                      está diseñado alrededor de lo que realmente pasa en la operación.
-                    </span>
-                  </p>
-                </div>
-
-                <div class="stats">
-                  {stats.map((stat) => (
-                    <div class="stat-card">
-                      <strong>
-                        <span class="i18n-en">{stat.value.en}</span>
-                        <span class="i18n-es">{stat.value.es}</span>
-                      </strong>
-                      <span>
-                        <span class="i18n-en">{stat.label.en}</span>
-                        <span class="i18n-es">{stat.label.es}</span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section tight-top" id="about">
-          <div class="container">
-            <div class="split-grid">
-              <div>
-                <div class="eyebrow">
-                  <span class="eyebrow-dot"></span>
-                  <span class="i18n-en">About Pozool</span>
-                  <span class="i18n-es">Sobre Pozool</span>
-                </div>
-                <h2 style="margin-top: 1.25rem; font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.15; letter-spacing: -0.03em;">
-                  <span class="i18n-en">Software for real operators, not generic landlords.</span>
-                  <span class="i18n-es">
-                    Software para operadores reales, no propietarios genéricos.
-                  </span>
-                </h2>
-                <p class="lead" style="margin-top: 1.25rem; max-width: none;">
-                  <span class="i18n-en">
-                    We're building Pozool because most property tools either over-promise
-                    enterprise features or under-deliver basic ones. Our focus is simple: clarity,
-                    reliability, and a hospitality-first mindset that respects how your team
-                    actually works.
-                  </span>
-                  <span class="i18n-es">
-                    Estamos construyendo Pozool porque la mayoría de herramientas para propiedades
-                    prometen demasiado para empresas grandes o fallan en lo básico. Nuestro enfoque
-                    es simple: claridad, confiabilidad y una mentalidad de hospitalidad que respeta
-                    cómo trabaja realmente tu equipo.
-                  </span>
-                </p>
-                <div class="hero-actions" style="margin-top: 1.75rem;">
-                  <a class="button-secondary" href="#about">
-                    <span class="i18n-en">Our story</span>
-                    <span class="i18n-es">Nuestra historia</span>
-                  </a>
-                  <a class="button-secondary" href="#why">
-                    <span class="i18n-en">Why Pozool</span>
-                    <span class="i18n-es">Por qué Pozool</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="ink-card" id="why">
-                <p>
-                  <span class="i18n-en">Our promise</span>
-                  <span class="i18n-es">Nuestra promesa</span>
-                </p>
-                <p>
-                  <span class="i18n-en">
-                    "Every feature in Pozool earns its place by removing operational friction — not
-                    by looking impressive."
-                  </span>
-                  <span class="i18n-es">
-                    "Cada función en Pozool se gana su lugar eliminando fricción operativa, no por
-                    verse impresionante."
-                  </span>
-                </p>
-                <p>
-                  <span class="i18n-en">— The Pozool team</span>
-                  <span class="i18n-es">— El equipo de Pozool</span>
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
