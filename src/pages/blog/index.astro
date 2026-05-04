@@ -1,5 +1,7 @@
 ---
 import Analytics from "@vercel/analytics/astro";
+import { Image } from "astro:assets";
+import pozoolLogo from "../../assets/pozool-logo.png";
 
 const postDate = "April 29, 2026";
 const postUrl = "/blog/and-now-we-have-arrived-pozool-stays";
@@ -271,7 +273,7 @@ const postUrl = "/blog/and-now-we-have-arrived-pozool-stays";
       <header class="header">
         <div class="container header-inner">
           <a class="brand" href="/" aria-label="Pozool home">
-            <img src="/pozool-logo.png" alt="" />
+            <Image src={pozoolLogo} alt="" width={64} height={64} format="webp" />
             <span>Pozool</span>
           </a>
 

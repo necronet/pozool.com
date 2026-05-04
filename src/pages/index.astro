@@ -1,5 +1,16 @@
 ---
 import Analytics from "@vercel/analytics/astro";
+import { Image } from "astro:assets";
+import heroRental from "../assets/hero-rental.jpg";
+import airbnbDemo1 from "../assets/airbnb-demo-1.jpg";
+import airbnbDemo2 from "../assets/airbnb-demo-2.png";
+import airbnbDemo3 from "../assets/airbnb-demo-3.jpg";
+import airbnbDemo4 from "../assets/airbnb-demo-4.jpg";
+import airbnbDemo5 from "../assets/airbnb-demo-5.png";
+import teamPatricia from "../assets/team-patricia.png";
+import teamCesar from "../assets/team-cesar.png";
+import teamJose from "../assets/team-jose.jpg";
+import pozoolLogo from "../assets/pozool-logo.png";
 
 const blogHref = import.meta.env.PROD ? "https://blog.pozool.com" : "/blog";
 
@@ -93,11 +104,38 @@ const heroHighlights = [
   },
 ];
 
+const heroImages = [
+  {
+    src: heroRental,
+    alt: "Beautifully styled short-term rental interior at golden hour",
+  },
+  {
+    src: airbnbDemo1,
+    alt: "Airbnb listing demo preview for a rental property",
+  },
+  {
+    src: airbnbDemo2,
+    alt: "Airbnb reservation demo preview for a rental property",
+  },
+  {
+    src: airbnbDemo3,
+    alt: "Airbnb guest messaging demo preview for a rental property",
+  },
+  {
+    src: airbnbDemo4,
+    alt: "Airbnb calendar demo preview for a rental property",
+  },
+  {
+    src: airbnbDemo5,
+    alt: "Airbnb hosting dashboard demo preview for a rental property",
+  },
+];
+
 const teamMembers = [
   {
     name: "Patricia",
     role: { en: "Rental estate operator", es: "Operadora de bienes raíces en renta" },
-    image: "/team-patricia.png",
+    image: teamPatricia,
     bio: {
       en: "With a strong technical background in computer science, Patricia leads the product forward by identifying what rental operators and guests need most.",
       es: "Con una sólida formación técnica en ciencias de la computación, Patricia impulsa el producto identificando lo que más necesitan los operadores de renta y los huéspedes.",
@@ -106,7 +144,7 @@ const teamMembers = [
   {
     name: "Cesar Bolaños",
     role: { en: "Technical lead", es: "Líder técnico" },
-    image: "/team-cesar.png",
+    image: teamCesar,
     bio: {
       en: "Cesar brings over 10 years in the tech industry building products across multiple companies. He now leads the charge in making Pozool shine.",
       es: "Cesar aporta más de 10 años en la industria tecnológica construyendo productos en múltiples compañías. Ahora lidera el esfuerzo para hacer brillar a Pozool.",
@@ -115,7 +153,7 @@ const teamMembers = [
   {
     name: "Jose Ayerdis",
     role: { en: "Software engineer", es: "Ingeniero de software" },
-    image: "/team-jose.jpg",
+    image: teamJose,
     bio: {
       en: "Jose has over 10 years of experience in the payment and booking industry. He translates user needs into delivered product features.",
       es: "Jose tiene más de 10 años de experiencia en la industria de pagos y reservas. Traduce las necesidades de los usuarios en funciones de producto entregadas.",
@@ -1175,7 +1213,7 @@ const footerLegal = [
       <header class="header">
         <div class="container header-inner">
           <a class="brand" href="#top">
-            <img src="/pozool-logo.png" alt="Pozool" />
+            <Image src={pozoolLogo} alt="Pozool" width={64} height={64} format="webp" />
             <span>Pozool</span>
           </a>
 
@@ -1295,48 +1333,22 @@ const footerLegal = [
                 class="hero-carousel"
                 aria-label="Rental operations and Airbnb listing preview"
               >
-                <img
-                  class="hero-photo"
-                  src="/hero-rental.jpg"
-                  alt="Beautifully styled short-term rental interior at golden hour"
-                  width="1600"
-                  height="1100"
-                />
-                <img
-                  class="hero-photo"
-                  src="/airbnb-demo-1.jpg"
-                  alt="Airbnb listing demo preview for a rental property"
-                  width="1600"
-                  height="1100"
-                />
-                <img
-                  class="hero-photo"
-                  src="/airbnb-demo-2.png"
-                  alt="Airbnb reservation demo preview for a rental property"
-                  width="1600"
-                  height="1100"
-                />
-                <img
-                  class="hero-photo"
-                  src="/airbnb-demo-3.jpg"
-                  alt="Airbnb guest messaging demo preview for a rental property"
-                  width="1600"
-                  height="1100"
-                />
-                <img
-                  class="hero-photo"
-                  src="/airbnb-demo-4.jpg"
-                  alt="Airbnb calendar demo preview for a rental property"
-                  width="1600"
-                  height="1100"
-                />
-                <img
-                  class="hero-photo"
-                  src="/airbnb-demo-5.png"
-                  alt="Airbnb hosting dashboard demo preview for a rental property"
-                  width="1600"
-                  height="1100"
-                />
+                {
+                  heroImages.map((image, index) => (
+                    <Image
+                      class="hero-photo"
+                      src={image.src}
+                      alt={image.alt}
+                      width={1600}
+                      height={1100}
+                      format="webp"
+                      quality={82}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding={index === 0 ? "sync" : "async"}
+                      fetchpriority={index === 0 ? "high" : "auto"}
+                    />
+                  ))
+                }
               </div>
 
               <div class="hero-card" aria-label="Pozool operational highlights">
@@ -1635,7 +1647,17 @@ const footerLegal = [
                       <div class="team-card-header">
                         {
                           member.image ? (
-                            <img class="team-photo" src={member.image} alt={member.name} />
+                            <Image
+                              class="team-photo"
+                              src={member.image}
+                              alt={member.name}
+                              width={96}
+                              height={96}
+                              format="webp"
+                              quality={85}
+                              loading="lazy"
+                              decoding="async"
+                            />
                           ) : (
                             <span class="team-initials" aria-hidden="true">
                               {member.name
@@ -1673,7 +1695,7 @@ const footerLegal = [
           <div class="footer-main">
             <div>
               <a class="brand" href="#top">
-                <img src="/pozool-logo.png" alt="Pozool" />
+                <Image src={pozoolLogo} alt="Pozool" width={64} height={64} format="webp" />
                 <span>Pozool</span>
               </a>
               <p>
