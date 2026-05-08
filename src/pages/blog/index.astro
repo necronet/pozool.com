@@ -308,6 +308,7 @@ const posts: BlogPost[] = Object.entries(postModules)
             }
 
             .post-card {
+                width: 100%;
                 display: block;
                 padding: clamp(1.5rem, 4vw, 2.5rem);
                 border: 1px solid var(--border);
@@ -482,13 +483,6 @@ const posts: BlogPost[] = Object.entries(postModules)
                                                 post.frontmatter.lang,
                                             )}
                                         </span>
-                                        <span class="post-language">
-                                            {
-                                                languageLabels[
-                                                    post.frontmatter.lang
-                                                ]
-                                            }
-                                        </span>
                                     </p>
                                     <h2>{post.frontmatter.title}</h2>
                                     <p class="post-content">
@@ -572,10 +566,7 @@ const posts: BlogPost[] = Object.entries(postModules)
                 }
 
                 emptyState?.toggleAttribute("hidden", visibleCount > 0);
-                window.localStorage.setItem(
-                    "pozool-language",
-                    activeLanguage,
-                );
+                window.localStorage.setItem("pozool-language", activeLanguage);
 
                 if (shouldUpdateUrl) {
                     const nextUrl = new URL(window.location.href);
