@@ -112,6 +112,25 @@ Or temporarily change `server.host` in `astro.config.mjs` if needed.
 | `npm run preview` | Preview the production build locally |
 | `npm run astro` | Run Astro CLI commands |
 
+## Blog Slack Notifications
+
+The production build runs `notify-slack.mjs` after `astro build`. When the current git commit adds one or more published Markdown files in `src/content/blog/`, the script sends a Slack message for each new post.
+
+Configure these environment variables locally or in Vercel:
+
+```sh
+SLACK_WEBHOOK_URL=
+SITE_URL=https://pozool.com
+```
+
+`SLACK_WEBHOOK_URL` is required to post. `SITE_URL` defaults to `https://pozool.com`.
+
+For custom comparisons, set `BLOG_NOTIFY_GIT_RANGE`, for example:
+
+```sh
+BLOG_NOTIFY_GIT_RANGE=origin/main..HEAD npm run build
+```
+
 ## Build Output
 
 Production builds are generated in:
