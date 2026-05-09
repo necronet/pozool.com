@@ -39,7 +39,8 @@ The main landing page is bilingual (**English / Spanish**) and includes a client
 │       ├── terms.astro         # Terms of service
 │       └── blog/
 │           ├── index.astro     # Blog listing page
-│           └── and-now-we-have-arrived-pozool-stays.astro
+│           ├── [slug].astro    # Blog post template
+│           └── rss.xml.ts      # Blog RSS feed endpoint
 ├── astro.config.mjs            # Astro config, local dev host
 ├── vercel.json                 # Vercel redirects for blog host behavior
 ├── package.json                # Scripts, engines, dependencies
@@ -60,8 +61,11 @@ Main Pozool landing page. Includes:
 ### `/blog`
 Simple blog index page for company updates.
 
-### `/blog/and-now-we-have-arrived-pozool-stays`
-First published blog post introducing the blog and product direction.
+### `/blog/[slug]`
+Published Markdown blog posts from `src/content/blog/`.
+
+### `/blog/rss.xml`
+RSS feed for published blog posts.
 
 ### `/privacy` and `/terms`
 Legal pages linked from the site footer.
