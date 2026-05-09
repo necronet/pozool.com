@@ -65,7 +65,7 @@ Simple blog index page for company updates.
 Published Markdown blog posts from `src/content/blog/`.
 
 ### `/blog/rss.xml`
-RSS feed for published blog posts.
+RSS feed for published blog posts. Add `?lang=en` or `?lang=es` to return only posts for that language.
 
 ### `/privacy` and `/terms`
 Legal pages linked from the site footer.

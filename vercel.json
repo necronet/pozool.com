@@ -44,5 +44,29 @@
       "destination": "https://pozool.com/blog/:path*",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog/rss.xml",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/blog/rss.en.xml"
+    },
+    {
+      "source": "/blog/rss.xml",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "es"
+        }
+      ],
+      "destination": "/blog/rss.es.xml"
+    }
   ]
 }
