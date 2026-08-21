@@ -193,19 +193,6 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
                 padding: clamp(4rem, 9vw, 7rem) 0;
             }
 
-            .back-link {
-                display: inline-flex;
-                align-items: center;
-                margin-bottom: 2rem;
-                color: var(--ink-soft);
-                font-size: 0.9rem;
-                font-weight: 600;
-            }
-
-            .back-link:hover {
-                color: var(--foreground);
-            }
-
             article {
                 padding: clamp(1.5rem, 4vw, 3rem);
                 border: 1px solid var(--border);
@@ -245,10 +232,13 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
 
             h1 {
                 margin-top: 0.75rem;
-                font-size: clamp(2.5rem, 7vw, 4.25rem);
+                max-width: 100%;
+                font-size: clamp(2.3rem, 6vw, 4.25rem);
                 line-height: 0.98;
                 letter-spacing: -0.04em;
-                text-wrap: balance;
+                text-wrap: pretty;
+                word-break: normal;
+                overflow-wrap: normal;
             }
 
             .content {
@@ -408,8 +398,6 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
 
             <main>
                 <div class="container article-container">
-                    <a class="back-link" href="/blog">Back to blog</a>
-
                     <article>
                         <h1>{postTitle}</h1>
 

@@ -56,16 +56,16 @@ const posts: BlogPost[] = Object.entries(postModules)
         <meta name="author" content="Pozool" />
         <meta
             name="description"
-            content="Updates and notes from the Pozool team."
+            content="Pozool blog."
         />
         <meta property="og:title" content="Pozool Blog" />
         <meta
             property="og:description"
-            content="Updates and notes from the Pozool team."
+            content="Pozool blog."
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <title>Pozool Blog</title>
+        <title>Pozool Stays Blog, a place we call home</title>
         <link
             rel="alternate"
             type="application/rss+xml"
@@ -292,6 +292,10 @@ const posts: BlogPost[] = Object.entries(postModules)
                 text-wrap: balance;
             }
 
+            .title-line {
+                white-space: nowrap;
+            }
+
             .gradient-text {
                 background: var(--gradient-primary);
                 -webkit-background-clip: text;
@@ -404,6 +408,10 @@ const posts: BlogPost[] = Object.entries(postModules)
                 main {
                     padding-top: 3rem;
                 }
+
+                .title-line {
+                    white-space: normal;
+                }
             }
         </style>
     </head>
@@ -444,12 +452,12 @@ const posts: BlogPost[] = Object.entries(postModules)
                 <div class="container">
                     <section class="blog-heading" aria-labelledby="blog-title">
                         <h1 id="blog-title">
-                            <span class="i18n-en">
+                            <span class="i18n-en title-line">
                                 A home we call <span class="gradient-text"
                                     >Pozool Stays</span
                                 >
                             </span>
-                            <span class="i18n-es">
+                            <span class="i18n-es title-line">
                                 Un hogar llamado <span class="gradient-text"
                                     >Pozool Stays</span
                                 >
@@ -531,15 +539,13 @@ const posts: BlogPost[] = Object.entries(postModules)
                     nextLabel: "ES",
                     aria: "Switch language to Spanish",
                     title: "Pozool Blog",
-                    description:
-                        "Updates from the team building hospitality-first property management software.",
+                    description: "Pozool blog.",
                 },
                 es: {
                     nextLabel: "EN",
                     aria: "Cambiar idioma a inglés",
                     title: "Blog de Pozool",
-                    description:
-                        "Notas del equipo que construye software de gestión de propiedades pensado para hospitalidad.",
+                    description: "Blog de Pozool.",
                 },
             };
 
