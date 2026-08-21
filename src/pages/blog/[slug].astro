@@ -275,6 +275,21 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
                 line-height: 1.75;
             }
 
+            .content :global(p:has(> img:only-child)) {
+                margin: 0 0 1.75rem;
+            }
+
+            .content :global(img) {
+                width: 100%;
+                max-height: min(42rem, 70vh);
+                margin: 0 auto;
+                border: 1px solid var(--border);
+                border-radius: calc(var(--radius) - 0.125rem);
+                background: rgb(255 255 255 / 0.92);
+                box-shadow: var(--shadow-soft);
+                object-fit: contain;
+            }
+
             .content :global(h2) {
                 margin: 2rem 0;
                 color: var(--foreground);
@@ -293,6 +308,57 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
                 margin-top: 0.5rem;
             }
 
+            .content :global(table) {
+                width: 100%;
+                margin: 1.75rem 0;
+                border-collapse: separate;
+                border-spacing: 0;
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                overflow: hidden;
+                background: rgb(255 255 255 / 0.9);
+                box-shadow: var(--shadow-soft);
+                font-size: 0.98rem;
+                line-height: 1.55;
+            }
+
+            .content :global(thead) {
+                background: rgb(246 239 228 / 0.9);
+            }
+
+            .content :global(th),
+            .content :global(td) {
+                padding: 0.9rem 1rem;
+                text-align: left;
+                vertical-align: top;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .content :global(th) {
+                color: var(--foreground);
+                font-size: 0.82rem;
+                font-weight: 800;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            .content :global(td) {
+                color: var(--ink-soft);
+            }
+
+            .content :global(tbody tr:nth-child(even)) {
+                background: rgb(252 249 243 / 0.72);
+            }
+
+            .content :global(tbody tr:last-child td) {
+                border-bottom: 0;
+            }
+
+            .content :global(table + p),
+            .content :global(table + h2) {
+                margin-top: 1.5rem;
+            }
+
             @media (max-width: 36rem) {
                 .container {
                     padding: 0 1rem;
@@ -308,6 +374,12 @@ const postDate = new Intl.DateTimeFormat(post.frontmatter.lang, {
 
                 main {
                     padding-top: 3rem;
+                }
+
+                .content :global(table) {
+                    display: block;
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
                 }
             }
         </style>
