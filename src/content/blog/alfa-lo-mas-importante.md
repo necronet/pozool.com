@@ -2,31 +2,31 @@
 title: "Alfa: lo más importante"
 date: "2026-09-09"
 lang: "es"
-excerpt: "Pozool Stays está en alfa: una primera versión para ordenar la operación diaria de propiedades y rentas desde un solo lugar."
+excerpt: "Pozool Stays está en alfa: una herramienta para dar claridad a la operación diaria de propiedades y alquileres."
 ---
 
-Pozool Stays está en alfa. Lo más importante no es una lista interminable de funciones: es poder administrar propiedades, reservas, tareas y gastos con un poco menos de caos y mucha más claridad.
+Pozool Stays está en alfa. Estamos construyendo una forma más clara de administrar propiedades, alquileres y la operación que ocurre entre una reserva y la siguiente.
 
-![Un apartamento preparado para recibir huéspedes](/airbnb-demo-1.jpg)
+![Panel de Pozool Stays](/dashboard-1.png)
 
-Cada propiedad tiene su propia identidad y sus detalles. Por eso Stays empieza por una base ordenada: propiedades, unidades, fotos, ubicación e información que el equipo necesita encontrar sin buscar entre chats y hojas de cálculo.
+El panel pone lo urgente al frente: llegadas, salidas, ocupación, pagos, ADR, RevPAR y las reservas del día. Es una vista rápida para empezar la jornada sabiendo qué requiere atención.
 
-![Una cabaña de renta corta con vista al atardecer](/airbnb-demo-2.png)
+![Calendario de disponibilidad de Pozool Stays](/calendar-view.png)
 
-Las rentas cortas exigen ritmo: calendarios, reservas, huéspedes, pagos y disponibilidad. La alfa reúne esos flujos para que una operación pueda seguir el movimiento de cada listado desde un solo lugar.
+El calendario muestra la disponibilidad de todos los anuncios en una sola línea de tiempo. Así es más fácil detectar estancias, vacíos y cruces antes de que se conviertan en un problema.
 
-![Una propiedad con piscina lista para una estadía](/airbnb-demo-3.jpg)
+![Reservas de un anuncio en Pozool Stays](/listing-reservation-list.png)
 
-Una reserva no termina al confirmarse. Limpiezas, mantenimiento y gastos también forman parte de entregar una buena experiencia. Stays los conecta con las propiedades y reservas para que la operación no pierda contexto.
+Cada anuncio tiene su propio contexto: precio por noche, tarifa de limpieza, huéspedes alojados y el historial de reservas. La operación deja de estar repartida entre conversaciones, plataformas y hojas de cálculo.
 
-![Un espacio interior con personalidad](/airbnb-demo-4.jpg)
+![Formulario para crear una reservación manual en Pozool Stays](/reservation-create.png)
 
-No todas las propiedades se administran igual. Pozool Stays está pensado para portafolios mixtos, donde las rentas de corta estancia conviven con rentas más largas y cada una necesita seguimiento sin crear procesos separados.
+También se pueden crear reservaciones manuales y directas. El flujo reúne el anuncio, los huéspedes, las fechas, los precios y los pagos en un mismo lugar para registrar cada estancia con claridad.
 
-![Una sala de estar lista para habitar](/airbnb-demo-5.png)
+![Directorio de huéspedes de Pozool Stays](/guest-list.png)
 
-Esta etapa alfa sirve para aprender con uso real: pulir lo que ya existe, escuchar a los primeros usuarios y hacer que las herramientas sean útiles antes de agregar más complejidad. La meta sigue siendo simple: darle a los administradores una visión más clara de su operación y más tiempo para atender sus propiedades y huéspedes.
+El directorio de huéspedes conserva la información y el historial de cada persona. Esto permite dar seguimiento a las estancias sin perder de vista la relación con quien llega a la propiedad.
 
-Pronto estaremos creando un proceso de onboarding y abriendo la herramienta a dueños de propiedades en general. ¡Mantente atento!
+La alfa es el momento para aprender con uso real, pulir estos flujos y hacer que sean útiles antes de agregar más complejidad. Pronto estaremos creando un proceso de onboarding y abriendo la herramienta a dueños de propiedades en general. ¡Mantente atento!
 
 Si administras propiedades y quieres conocer la alfa, escríbenos a [hello@pozool.com](mailto:hello@pozool.com) o visita [Pozool Stays](https://stays.pozool.com).
